@@ -104,18 +104,18 @@
 				<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
 				<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
 				<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-					<li class="start ">
+					<li class="active open">
 						<a href="index.html">
 						<i class="icon-home"></i>
 						<span class="title">Home</span>
+						<span class="selected"></span>
+						<span class="arrow open"></span>
 						</a>
 					</li>
-					<li class="active open">
+					<li class="start">
 						<a href="javascript:;">
 						<i class="icon-user"></i>
 						<span class="title">Profile</span>
-						<span class="selected"></span>
-						<span class="arrow open"></span>
 						</a>
 						<ul class="sub-menu">
 							<li>
@@ -1592,7 +1592,7 @@
 <script src="assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="assets/global/scripts/LingXX.js" type="text/javascript"></script>
 <script src="assets/admin/layout2/scripts/layout.js" type="text/javascript"></script>
 <script src="assets/admin/layout2/scripts/demo.js" type="text/javascript"></script>
 <script src="assets/admin/pages/scripts/profile.js" type="text/javascript"></script>
@@ -1600,7 +1600,7 @@
 <script>
 jQuery(document).ready(function() {       
    // initiate layout and plugins
-   Metronic.init(); // init metronic core components
+   LingXX.init(); // init LingXX core components
 Layout.init(); // init current layout
 Demo.init(); // init demo features\
 Profile.init(); // init page demo

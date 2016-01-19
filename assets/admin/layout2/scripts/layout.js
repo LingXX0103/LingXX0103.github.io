@@ -7,7 +7,7 @@ var Layout = function() {
 
     var layoutCssPath = 'admin/layout2/css/';
 
-    var resBreakpointMd = Metronic.getResponsiveBreakpoint('md');
+    var resBreakpointMd = LingXX.getResponsiveBreakpoint('md');
 
     //* BEGIN:CORE HANDLERS *//
     // this function handles responsive layout on screen size resize or mobile device rotate.
@@ -20,7 +20,7 @@ var Layout = function() {
         var height;
 
         if (body.hasClass("page-footer-fixed") === true && body.hasClass("page-sidebar-fixed") === false) {
-            var available_height = Metronic.getViewPort().height - $('.page-footer').outerHeight() - $('.page-header').outerHeight();
+            var available_height = LingXX.getViewPort().height - $('.page-footer').outerHeight() - $('.page-header').outerHeight();
             if (content.height() < available_height) {
                 content.attr('style', 'min-height:' + available_height + 'px');
             }
@@ -34,14 +34,14 @@ var Layout = function() {
                 var headerHeight = $('.page-header').outerHeight();
                 var footerHeight = $('.page-footer').outerHeight();
 
-                if (Metronic.getViewPort().width < resBreakpointMd) {
-                    height = Metronic.getViewPort().height - headerHeight - footerHeight;
+                if (LingXX.getViewPort().width < resBreakpointMd) {
+                    height = LingXX.getViewPort().height - headerHeight - footerHeight;
                 } else {
                     height = sidebar.outerHeight() + 10;
                 }
 
-                if ((height + headerHeight + footerHeight) <= Metronic.getViewPort().height) {
-                    height = Metronic.getViewPort().height - headerHeight - footerHeight;
+                if ((height + headerHeight + footerHeight) <= LingXX.getViewPort().height) {
+                    height = LingXX.getViewPort().height - headerHeight - footerHeight;
                 }
             }
             content.attr('style', 'min-height:' + height + 'px');
@@ -107,7 +107,7 @@ var Layout = function() {
         });
 
         if (mode === 'click') {
-            if (Metronic.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
+            if (LingXX.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
                 $('.page-header .responsive-toggler').click();
             }
         }
@@ -117,12 +117,12 @@ var Layout = function() {
     var handleSidebarMenu = function() {
         $('.page-sidebar').on('click', 'li > a', function(e) {
 
-            if (Metronic.getViewPort().width >= resBreakpointMd && $(this).parents('.page-sidebar-menu-hover-submenu').size() === 1) { // exit of hover sidebar menu
+            if (LingXX.getViewPort().width >= resBreakpointMd && $(this).parents('.page-sidebar-menu-hover-submenu').size() === 1) { // exit of hover sidebar menu
                 return;
             }
 
             if ($(this).next().hasClass('sub-menu') === false) {
-                if (Metronic.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
+                if (LingXX.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
                     $('.page-header .responsive-toggler').click();
                 }
                 return;
@@ -159,7 +159,7 @@ var Layout = function() {
                                 'scrollTo': (the.position()).top
                             });
                         } else {
-                            Metronic.scrollTo(the, slideOffeset);
+                            LingXX.scrollTo(the, slideOffeset);
                         }
                     }
                     handleSidebarAndContentHeight();
@@ -174,7 +174,7 @@ var Layout = function() {
                                 'scrollTo': (the.position()).top
                             });
                         } else {
-                            Metronic.scrollTo(the, slideOffeset);
+                            LingXX.scrollTo(the, slideOffeset);
                         }
                     }
                     handleSidebarAndContentHeight();
@@ -187,7 +187,7 @@ var Layout = function() {
         // handle ajax links within sidebar menu
         $('.page-sidebar').on('click', ' li > a.ajaxify', function(e) {
             e.preventDefault();
-            Metronic.scrollTop();
+            LingXX.scrollTop();
 
             var url = $(this).attr("href");
             var menuContainer = $('.page-sidebar ul');
@@ -203,11 +203,11 @@ var Layout = function() {
             });
             $(this).parents('li').addClass('active');
 
-            if (Metronic.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
+            if (LingXX.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
                 $('.page-header .responsive-toggler').click();
             }
 
-            Metronic.startPageLoading();
+            LingXX.startPageLoading();
 
             var the = $(this);
 
@@ -222,13 +222,13 @@ var Layout = function() {
                         $('.page-sidebar-menu > li.open > a').click();
                     }
 
-                    Metronic.stopPageLoading();
+                    LingXX.stopPageLoading();
                     pageContentBody.html(res);
                     Layout.fixContentHeight(); // fix content height
-                    Metronic.initAjax(); // initialize core stuff
+                    LingXX.initAjax(); // initialize core stuff
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
-                    Metronic.stopPageLoading();
+                    LingXX.stopPageLoading();
                     pageContentBody.html('<h4>Could not load the requested content.</h4>');
                 }
             });
@@ -237,15 +237,15 @@ var Layout = function() {
         // handle ajax link within main content
         $('.page-content').on('click', '.ajaxify', function(e) {
             e.preventDefault();
-            Metronic.scrollTop();
+            LingXX.scrollTop();
 
             var url = $(this).attr("href");
             var pageContent = $('.page-content');
             var pageContentBody = $('.page-content .page-content-body');
 
-            Metronic.startPageLoading();
+            LingXX.startPageLoading();
 
-            if (Metronic.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
+            if (LingXX.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
                 $('.page-header .responsive-toggler').click();
             }
 
@@ -255,27 +255,27 @@ var Layout = function() {
                 url: url,
                 dataType: "html",
                 success: function(res) {
-                    Metronic.stopPageLoading();
+                    LingXX.stopPageLoading();
                     pageContentBody.html(res);
                     Layout.fixContentHeight(); // fix content height
-                    Metronic.initAjax(); // initialize core stuff
+                    LingXX.initAjax(); // initialize core stuff
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
                     pageContentBody.html('<h4>Could not load the requested content.</h4>');
-                    Metronic.stopPageLoading();
+                    LingXX.stopPageLoading();
                 }
             });
         });
 
         // handle scrolling to top on responsive menu toggler click when header is fixed for mobile view
         $(document).on('click', '.page-header-fixed-mobile .page-header .responsive-toggler', function(){
-            Metronic.scrollTop();
+            LingXX.scrollTop();
         });      
     };
 
     // Helper function to calculate sidebar height for fixed sidebar layout.
     var _calculateFixedSidebarViewportHeight = function() {
-        var sidebarHeight = Metronic.getViewPort().height - $('.page-header').outerHeight();
+        var sidebarHeight = LingXX.getViewPort().height - $('.page-header').outerHeight();
         if ($('body').hasClass("page-footer-fixed")) {
             sidebarHeight = sidebarHeight - $('.page-footer').outerHeight();
         }
@@ -287,16 +287,16 @@ var Layout = function() {
     var handleFixedSidebar = function() {
         var menu = $('.page-sidebar-menu');
 
-        Metronic.destroySlimScroll(menu);
+        LingXX.destroySlimScroll(menu);
 
         if ($('.page-sidebar-fixed').size() === 0) {
             handleSidebarAndContentHeight();
             return;
         }
 
-        if (Metronic.getViewPort().width >= resBreakpointMd) {
+        if (LingXX.getViewPort().width >= resBreakpointMd) {
             menu.attr("data-height", _calculateFixedSidebarViewportHeight());
-            Metronic.initSlimScroll(menu);
+            LingXX.initSlimScroll(menu);
             handleSidebarAndContentHeight();
         }
     };
@@ -320,7 +320,7 @@ var Layout = function() {
     // Hanles sidebar toggler
     var handleSidebarToggler = function() {
         var body = $('body');
-        if ($.cookie && $.cookie('sidebar_closed') === '1' && Metronic.getViewPort().width >= resBreakpointMd) {
+        if ($.cookie && $.cookie('sidebar_closed') === '1' && LingXX.getViewPort().width >= resBreakpointMd) {
             $('body').addClass('page-sidebar-closed');
             $('.page-sidebar-menu').addClass('page-sidebar-menu-closed');
         }
@@ -477,7 +477,7 @@ var Layout = function() {
             return;
         }
 
-        height = Metronic.getViewPort().height -
+        height = LingXX.getViewPort().height -
             $('.page-header').outerHeight(true) -
             $('.page-footer').outerHeight(true) -
             $('.page-title').outerHeight(true) -
@@ -489,8 +489,8 @@ var Layout = function() {
 
         var portletBody = target.find('.portlet-body');
 
-        if (Metronic.getViewPort().width < resBreakpointMd) {
-            Metronic.destroySlimScroll(portletBody.find('.full-height-content-body')); // destroy slimscroll 
+        if (LingXX.getViewPort().width < resBreakpointMd) {
+            LingXX.destroySlimScroll(portletBody.find('.full-height-content-body')); // destroy slimscroll 
             return;
         }
 
@@ -503,7 +503,7 @@ var Layout = function() {
 
         if (target.hasClass("full-height-content-scrollable")) {
             portletBody.find('.full-height-content-body').css('height', height);
-            Metronic.initSlimScroll(portletBody.find('.full-height-content-body'));
+            LingXX.initSlimScroll(portletBody.find('.full-height-content-body'));
         } else {
             portletBody.css('min-height', height);
         }
@@ -530,19 +530,19 @@ var Layout = function() {
             handleSidebarMenu(); // handles main menu
             handleSidebarToggler(); // handles sidebar hide/show
 
-            if (Metronic.isAngularJsApp()) {      
+            if (LingXX.isAngularJsApp()) {      
                 handleSidebarMenuActiveLink('match'); // init sidebar active links 
             }
 
-            Metronic.addResizeHandler(handleFixedSidebar); // reinitialize fixed sidebar on window resize
+            LingXX.addResizeHandler(handleFixedSidebar); // reinitialize fixed sidebar on window resize
         },
 
         initContent: function() {
             handle100HeightContent(); // handles 100% height elements(block, portlet, etc)
             handleTabs(); // handle bootstrah tabs
 
-            Metronic.addResizeHandler(handleSidebarAndContentHeight); // recalculate sidebar & content height on window resize
-            Metronic.addResizeHandler(handle100HeightContent); // reinitialize content height on window resize 
+            LingXX.addResizeHandler(handleSidebarAndContentHeight); // recalculate sidebar & content height on window resize
+            LingXX.addResizeHandler(handle100HeightContent); // reinitialize content height on window resize 
         },
 
         initFooter: function() {
@@ -570,11 +570,11 @@ var Layout = function() {
         },
 
         getLayoutImgPath: function() {
-            return Metronic.getAssetsPath() + layoutImgPath;
+            return LingXX.getAssetsPath() + layoutImgPath;
         },
 
         getLayoutCssPath: function() {
-            return Metronic.getAssetsPath() + layoutCssPath;
+            return LingXX.getAssetsPath() + layoutCssPath;
         }
     };
 
