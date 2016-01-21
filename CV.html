@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title>LingXX</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+<link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link href="assets/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
+<!-- END PAGE LEVEL STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout2/css/layout.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="assets/admin/layout2/css/themes/grey.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout2/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="page-boxed page-header-fixed page-container-bg-solid page-sidebar-closed page-sidebar-closed-hide-logo">
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner container">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index.html">
+			<!--<img src="assets/admin/layout2/img/logo-default.png" alt="logo" class="logo-default"/>-->
+			</a>
+			<div class="menu-toggler sidebar-toggler">
+				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+			</div>
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN PAGE ACTIONS -->
+		<!-- DOC: Remove "hide" class to enable the page header actions -->
+		<div class="page-actions">
+			<div class="btn-group">
+				<button type="button" class="btn btn-circle red-pink dropdown-toggle" data-toggle="dropdown">
+				<i class="fa fa-plus"></i>&nbsp;<span class="hidden-sm hidden-xs">New&nbsp;</span>&nbsp;<i class="fa fa-angle-down"></i>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li>
+						<a href="javascript:;">
+						<i class="icon-user"></i> New User </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- END PAGE ACTIONS -->
+		<!-- BEGIN PAGE TOP -->
+		<div class="page-top">
+			<!-- BEGIN HEADER SEARCH BOX -->
+			<!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+			<form class="search-form search-form-expanded" action="extra_search.html" method="GET">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." name="query">
+					<span class="input-group-btn">
+					<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+					</span>
+				</div>
+			</form>
+			<!-- END HEADER SEARCH BOX -->
+		</div>
+		<!-- END PAGE TOP -->
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<div class="container">
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR -->
+		<div class="page-sidebar-wrapper">
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<div class="page-sidebar navbar-collapse collapse">
+				<!-- BEGIN SIDEBAR MENU -->
+				<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+				<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+				<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+				<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+				<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+				<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+				<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+					<li class="start">
+						<a href="index.html">
+						<i class="icon-home"></i>
+						<span class="title">Home</span>
+						</a>
+					</li>
+					<li class="active open">	
+						<a href="CV.html">
+						<i class="icon-user"></i>
+						<span class="title">CV</span>
+						<span class="selected"></span>
+						<span class="arrow open"></span>
+						</a>
+					</li>
+					<li class="start">
+						<a href="other.html">
+						<i class="fa fa-spinner"></i>
+						<span class="title">Other</span>
+						</a>
+					</li>
+				</ul>
+				<!-- END SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- END SIDEBAR -->
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<!-- BEGIN PAGE HEADER-->
+				<h3 class="page-title">
+				LingXX的世界 
+				</h3>
+				<div class="page-bar">
+					<ul class="page-breadcrumb">
+						<li>
+							<i class="fa fa-home"></i>
+							<a href="index.html">Home</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+						<li>
+							<a href="#">CV</a>
+						</li>
+					</ul>
+					<div class="page-toolbar">
+						<div class="btn-group pull-right">
+							<button type="button" class="btn btn-fit-height grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+							Actions <i class="fa fa-angle-down"></i>
+							</button>
+							<ul class="dropdown-menu pull-right" role="menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- END PAGE HEADER-->
+				<!-- BEGIN PAGE CONTENT-->
+				<div class="portlet light">
+					<div class="portlet-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row margin-bottom-20">
+									<div class="col-md-6">
+										<div class="space20">
+										</div>
+										<h3 class="form-section">基本资料</h3>
+										<div class="well">
+											<h4><strong>姓名：凌晓轩</strong></h4>
+											性别：男<br>
+											手机：13651643784<br>
+											户籍：上海<br>
+											邮箱：lingxiaoxuan@hotmail.com<br>	
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="space20">
+										</div>
+										<h3 class="form-section">职业意向</h3>
+										<div class="well">
+											期望行业：互联网/移动互联网/电子商务;计算机软件;IT服务/系统集成<br>
+											期望职位：项目经理/主管<br>
+											期望地点：上海<br>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row margin-bottom-20">
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<h3 class="form-section">自我评价</h3>
+										<div class="well">
+											1: 10年+软件开发经验，并且包括3年以上项目管理经验<br>
+											2: 熟悉软件开发周期，并参与过其中的每个环节。（项目需求，要件定义，项目设计，代码开发，单元测试，结合测试和质量管理等等）<br>
+											3：有一定的项目管理经验，了解客户需求，制定项目计划，管理组员工作等等。还有管理外包团队经验，协调各部门之间工作等等<br>
+											4: 有丰富web前端开发经验，并熟悉前台主流框架<br>
+											5: 熟悉最新前端开发框架angularJS,UI框架ionic及其图表框架echarts<br>
+											6：有丰富的net开发经验（vb.net,C#.net）及其MVC框架<br>
+											7：熟悉关系型数据库oracle,参与多个存储过程的开发，并能优化sql<br>
+											8：熟悉日本项目流程，参与多个日本项目的开发，有一定的日语交流能力<br>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row margin-bottom-20">
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<h3 class="form-section">工作经历</h3>
+										<div class="well">
+											<h4><strong>公司：上海时代天使医疗器械科技有限公司</strong></h4>
+											职务：项目经理<br>
+											工作地点：上海<br>
+											下属：10<br>
+											工作职责：1.负责与公司内部各部门联络，制定项目需求<br>
+											       2.沟通调研外部牙科医生，了解实际需求，编写项目设计文档<br>
+											       3.评估项目风险和研究制定对策<br>
+											       4.协助软件供应商（乙方）一起做市场调研，并制定技术评估，开发日程等等<br>
+											       5.监督整个项目的开发进度，制定每个阶段的成果物（比如设计书，review结果等）<br>
+											       6.制定项目品质管理标准，推动单元测试和集成测试的进行<br>
+											       7.制定验收测试标准，组织各部门进行用户测试<br>
+											       8.为上线前的部署做计划和规划，保证项目能顺利上线<br>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<div class="well">
+											<h4><strong>2013.09-2015.05：国际商业机器公司（INTERNATIONAL BUSINESS MACHINES）IBM</strong></h4>
+											职务：高级开发工程师<br>
+											工作地点：上海<br>
+											下属：0<br>
+											工作职责：关于设计:项目设计((概要设计式样书,详细设计式样书及其DB设计)<br>
+											       关于开发: 参与前端和后台开发<br>
+											       后台开发语言: C#.net<br>
+											       前端开发语言:JavaScript<br>
+											       前台框架：angularJS，jquery<br>
+											  UI框架：ionic<br>
+											       主要偏向web开发<br>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<div class="well">
+											<h4><strong>2012.07-2013.08：中讯申软计算机技术(上海)有限公司</strong></h4>
+											职务：项目主管<br>
+											工作地点：上海<br>
+											下属：5<br>
+											工作职责：参与项目的基本设计 测试式样书<br>
+											       管理团队，包括制定项目计划，人员安排，代码review，品质管理等等<br>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<div class="well">
+											<h4><strong>2004.09-2012.06：上海启明软件股份有限公司</strong></h4>
+											职务：项目主管<br>
+											工作地点：上海<br>
+											下属：10<br>
+											工作职责：关于设计:项目设计((概要设计式样书,详细设计式样书及其DB设计)<br>
+											       关于开发，开发语言: vb.net java脚本语言:JavaScript,VBScript<br>
+											       数据库:Oracle 熟悉SQL和存储过程，包<br>
+											       关于测试:审核产品/编写市场提交的需求文档<br>
+											       编写产品重要功能的业务实现流程图、开发实现机制流程图、测试方案、测试用例、技术文档、测试报告、测试记录等<br>
+											       协助开发进行功能验证<br>
+											       了解日本项目的设计和研发的流程.熟悉其开发模式<br>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row margin-bottom-20">
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<h3 class="form-section">语言能力</h3>
+										<div class="well">
+											英语：CET4<br>
+											日语：二级<br>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row margin-bottom-20">
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<h3 class="form-section">项目经历</h3>
+										<div class="well">
+											<h4><strong>项目：OPM2.0</strong></h4>
+											职务：项目经理<br>
+											项目描述：医生可以使用该系统，与时代天使进行交互，选择牙齿整形的方案（文字和3D），并可进行病例及其患者管理，提高了公司与医生沟通的效率。该系统分为PC端和移动端开发。<br>
+											项目职责：1.负责与公司内部各部门联络，制定项目需求。<br>
+											       2.沟通调研外部牙科医生，了解实际需求，编写项目设计文档<br>
+											       3.评估项目风险和研究制定对策<br>
+											       4.协助软件供应商（乙方）一起做市场调研，并制定技术评估，开发日程等等<br>
+											       5.监督整个项目的开发进度，制定每个阶段的成果物（比如设计书，review结果等）<br>
+											       6.制定项目品质管理标准，推动单元测试和集成测试的进行<br>
+											       7.制定验收测试标准，组织各部门进行用户测试<br>
+											       8.为上线前的部署做计划和规划，保证项目能顺利上线<br>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<div class="well">
+											<h4><strong>项目：阿斯利康管理系统</strong></h4>
+											职务：SE<br>
+											项目描述：一个管理病人情报的信息系统，包括个人资料，看病和服药历史等等用图表形式展现。前端框架jquery,bootstrap,html5等，后台为java，spring等。前后台交互为json文件。<br>
+											项目职责：主要担当前端开发。根据客户需求，搭建画面，实现前端功能。<br>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<div class="well">
+											<h4><strong>项目：KPI Dashboard移动 App开发</strong></h4>
+											职务：SE<br>
+											项目描述：用于统计各个项目的headcount和人月数。使用平台：ios系统，安卓系统  开发框架：AngularJS UI框架:ionic,echarts 后台服务：bluemix 开发语言：JS <br>
+											项目职责：根据画面设计书，构建画面和机能。利用AngularJS自有的自动测试，编写测试代码。<br>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<div class="well">
+											<h4><strong>项目：Tetora社内社外系统</strong></h4>
+											职务：SE<br>
+											项目描述：一个适用于公司内外的销售管理系统。包括订单的选择，配货，统计销售等等<br>
+											项目职责：根据客户的要件定义，写出详细设计书并进行开发和测试。<br>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<div class="well">
+											<h4><strong>项目：sbc社内系统 </strong></h4>
+											职务：PL<br>
+											项目描述：一个日本社内系统的长期web项目。期间使用的开发语言有asp，java，vb.net等等。功能覆盖考勤，预算计算，出货进货管理等等<br>
+											项目职责：PG：开发，测试等等 SE：详细设计，开发，测试 SL：管理小团队，详细设计，开发，测试 TL：管理团队，制定项目计划，品质管理等等。<br>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="space20">
+										</div>
+										<div class="well">
+											<h4><strong>项目：ECMMASTER多语言管理系统</strong></h4>
+											职务：PL<br>
+											项目描述：该项目为一个公司(三菱)内部品目的一个管理软件(CS).开发工具为C#(前台)Java(后台)Oracle(数据库).<br>
+											项目职责：担当项目的PL,编写详细式样书 负责与客户沟通(日方).填写QA,向组员讲解式样,Review Source,排日程表等等管理相关事宜。<br>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END PAGE CONTENT-->
+			</div>
+		</div>
+		<!-- END CONTENT -->
+		<!-- BEGIN QUICK SIDEBAR -->
+		<!--Cooming Soon...-->
+		<!-- END QUICK SIDEBAR -->
+	</div>
+	<!-- END CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<div class="page-footer">
+		<div class="page-footer-inner">
+			 2016 &copy; LingXX.
+		</div>
+		<div class="scroll-to-top">
+			<i class="icon-arrow-up"></i>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+</div>
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="assets/global/scripts/LingXX.js" type="text/javascript"></script>
+<script src="assets/admin/layout2/scripts/layout.js" type="text/javascript"></script>
+<script src="assets/admin/layout2/scripts/demo.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+jQuery(document).ready(function() {    
+   LingXX.init(); // init metronic core components
+Layout.init(); // init current layout
+Demo.init(); // init demo features
+});
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
